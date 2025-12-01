@@ -63,6 +63,12 @@ public class PessoaResource {
     }
 }
 
+@GET
+@Path("/aulas")
+public List<Aula> listarAulasDoOutroServico() {
+    return aulaClient.listar();
+}
+
 @Inject
 @RestClient
 AulaClient aulaClient;
