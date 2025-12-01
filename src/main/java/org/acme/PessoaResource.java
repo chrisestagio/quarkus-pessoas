@@ -7,6 +7,8 @@ import jakarta.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 @Path("/pessoas")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
@@ -60,4 +62,8 @@ public class PessoaResource {
         return Response.status(Response.Status.NOT_FOUND).build();
     }
 }
+
+@Inject
+@RestClient
+AulaClient aulaClient;
 
